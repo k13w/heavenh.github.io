@@ -3,6 +3,7 @@
 	border: 0;
 	margin: 0;
 	padding: 0;
+	font-family: 'Open Sans', sans-serif;
 }
 /*Conf do Body & html*/
 html, body {
@@ -30,6 +31,7 @@ header {
 /*Texto*/
 .info h1, h2 {
 	color: #d1ff83;
+	font-weight: 300;
 }
 /*Alinhamento*/
 .txt-center { text-align: center; }
@@ -43,9 +45,11 @@ header {
 #whoami h1 {
 	color: #d1ff83;
 	padding: 5%;
+	font-weight: 300;
 }
 #whoami h3 {
 	color: #d1ff83;
+	font-weight: 300;
 }
 #projetos {
 	height: 100%;
@@ -56,10 +60,12 @@ header {
 #projetos h1 {
 	color: #d1ff83;
 	padding: 5%;
+	font-weight: 300;
 }
 #projetos h3 {
 	width: 100%;
 	color: #d1ff83;
+	font-weight: 300;
 }
 .box {
 	display: inline-block;
@@ -104,5 +110,5 @@ header {
 }
 .down {
 	position: relative;
-	top: 45px;
+	top: 40px;
 }
