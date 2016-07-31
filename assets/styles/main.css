@@ -51,5 +51,58 @@ header {
 	height: 100%;
 }
 #projetos {
+	background: url(../images/projetos.jpg);
+}
+#projetos h1 {
+	color: #d1ff83;
+	padding: 5%;
+}
+#projetos h3 {
+	width: 100%;
+	color: #d1ff83;
+}
+.box {
+	display: inline-block;
+	padding: 15px;
+	margin: 15px;
+	min-height: 250px;
+	max-height: 250px;
+	min-width: 250px;
+  	max-width: 250px;
+  	color: #333;
+  	border: 0.8px solid #d1ff83;
+  	border-radius: 3px;
+}
+.box hr {
+    width: 100%;
+    border: 0.1px solid #d1ff83;
+}
 
+.box h3 {
+	color: #FFF;
+	padding: 10px;
+	min-height: 10px;
+	text-transform: uppercase;
+}
+
+.box h4 {
+	font-weight: 300;
+	color: #FFF;
+	padding: 20px;
+}
+.submit {
+	padding: 10px 22px;
+	color: #fff;
+	border: 1px solid white;
+	border-radius: 4px;
+	cursor: pointer;
+	background: #6f6f6f;
+	text-decoration: none;	
+}
+.submit:hover {
+	color: #d1ff83;;
+}
+.down {
+	position: relative;
+	top: 45px;
 }
