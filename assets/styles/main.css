@@ -1,0 +1,55 @@
+/*Normalizar Pagina*/
+* {
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+/*Conf do Body & html*/
+html, body {
+	width: 100%;
+	height: 100%;
+	min-width: 100%;
+	min-height: 100%;
+	font-size: 96%;
+}
+/*Conf cabecalho*/
+header {
+	width: 100%;
+	height: 100%;
+	background: url(../images/background.jpg) center center no-repeat;
+	background-size: cover;
+}
+/*Conf imagem*/
+.info img {
+	border: 2px #7FFF00 solid;
+	border-radius: 50%;
+	margin-top: 5%;
+	height: 230px;
+	width: 230px;
+}
+/*Texto*/
+.info h1, h2 {
+	color: #d1ff83;
+}
+/*Alinhamento*/
+.txt-center { text-align: center; }
+
+#whoami {
+	width: 100%;
+	height: 100%;
+	background: url(../images/whoami.jpg)center no-repeat;
+	background-size: cover;
+}
+#whoami h1 {
+	color: #d1ff83;
+	padding: 5%;
+}
+#whoami h3 {
+	color: #d1ff83;
+}
+#projetos {
+	height: 100%;
+}
+#projetos {
+
+}

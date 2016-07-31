@@ -1,0 +1,18 @@
+.arrow {
+	display: inline-block;
+ 	width: 4em;
+  	height: 4em;
+}
+
+.arrow:after {
+	content: '';
+	display: inline-block;
+ 	margin-top: 80px;
+  	width: 1.8em;
+  	height: 1.8em;
+ 	border-top: 0.3em solid #d1ff83;
+  	border-right: 0.3em solid #d1ff83;
+   -moz-transform: rotate(135deg);
+   -webkit-transform: rotate(135deg);
+   transform: rotate(135deg);
+}
