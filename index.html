@@ -1,33 +1,52 @@
 <!DOCTYPE html>
-<head lang="pt-br">
+<html lang="pt-br">
+<head>
 	<title>Heaven Labs</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="assets/css/animate.css"/>
 	<link rel="stylesheet" href="assets/css/main.css"/>
-	<link rel="stylesheet" href="assets/css/waypoints.css"/>
+	<link rel="stylesheet" href="assets/css/arrow.css"/>
 	<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.6.0/jquery.nicescroll.min.js"></script>
-	<script type="text/javascript" src="assets/js/jquery.waypoints.min.js"></script>
 	<script type="text/javascript" src="assets/js/scroll.js"></script>
-	<script type="text/javascript" src="assets/js/waypoints.js"></script>
-
+	<script type="text/javascript" src="assets/js/hide.js"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+	<script type="text/javascript">
+		particlesJS.load('particles-js', 'assets/particles.json', function() {
+			console.log('callback - particles.js config loaded');
+		});
+	</script>
 </head>
+
 <body>
 	<section class="home">
 		<div class="inner">
 			<div class="content">
-				<section class="os-animation" data-os-animation="animated fadeInDown"
-				data-os-animation-delay="0s">
-				<h1>Heaven</h1>
+				<section class="animated fadeInDown">
+					<h1>Heaven</h1>
 				</section>
-				<section class="os-animation" data-os-animation="bounceInUp"
-				data-os-animation-delay=".2s">
-				<a class="btn" href="#whoami">Get Started</a>
-				<a class="btn" href="#whoami">Github</a>
-				<a class="btn" href="#whoami">Blog</a>
-				<a class="btn" href="#whoami">Write-Ups</a>
+				<section class="animated bounceInUp">
+					<a class="btn" href="#whoami">Get Started</a>
+					<a class="btn" href="#whoami">Github</a>
+					<a class="btn" href="#whoami">Blog</a>
+					<a class="btn" href="#whoami">Write-Ups</a>
 				</section>
+			</div>
+		</div>
+	</section>
+	<section id="whoami">
+		<div id="particles-js">
+			<div class="alinhamento">
+				<div class="line">
+					<form method="post" id="login">
+						<label class="control-label" for="email">E-Mail</label>
+						<input type="text" name="email" class="borda" placeholder="Email">
+						<label class="control-label" for="password">Password</label>
+						<input type="password" name="senha" class="borda" placeholder="Senha">
+					</form>
+					<input type="submit" class="btn-login" value="Login" name="login">
+				</div>
 			</div>
 		</div>
 	</section>
