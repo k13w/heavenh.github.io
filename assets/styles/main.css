@@ -1,114 +1,146 @@
-/*Normalizar Pagina*/
-* {
-	border: 0;
+@import url('https://fonts.googleapis.com/css?family=Yantramanav:100');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400');
+
+html, body {
 	margin: 0;
 	padding: 0;
-	font-family: 'Open Sans', sans-serif;
-}
-/*Conf do Body & html*/
-html, body {
-	width: 100%;
 	height: 100%;
-	min-width: 100%;
-	min-height: 100%;
-	font-size: 96%;
-}
-/*Conf cabecalho*/
-header {
 	width: 100%;
+}
+.home {
 	height: 100%;
-	background: url(../images/background.jpg) center center no-repeat;
+	width: 100%;
+	margin: auto;
+	background: url(../imgs/background.jpg) center no-repeat;
 	background-size: cover;
+	display: table;
+	top: 0;
 }
-/*Conf imagem*/
-.info img {
-	border: 2px #7FFF00 solid;
-	border-radius: 50%;
-	margin-top: 5%;
-	height: 230px;
-	width: 230px;
-}
-/*Texto*/
-.info h1, h2 {
-	color: #d1ff83;
-	font-weight: 300;
-}
-/*Alinhamento*/
-.txt-center { text-align: center; }
-
-#whoami {
+.home .inner {
+	display: table-cell;
+	vertical-align: middle;
 	width: 100%;
-	height: 100%;
-	background: url(../images/whoami.jpg)center no-repeat;
-	background-size: cover;
+	max-width: none;
 }
-#whoami h1 {
+.content {
+	max-width: 600px;
+	margin: 0 auto;
+	text-align: center;
+	padding-bottom: 20%;
+}
+.content h1 {
+	font-family: 'Yantramanav', sans-serif;
+	font-size: 700%;
+	font-weight: 100;
 	color: #d1ff83;
-	padding: 5%;
-	font-weight: 300;
+	line-height: 70%
 }
-#whoami h3 {
-	color: #d1ff83;
-	font-weight: 300;
-}
-#projetos {
-	height: 100%;
-}
-#projetos {
-	background: url(../images/projetos.jpg);
-}
-#projetos h1 {
-	color: #d1ff83;
-	padding: 5%;
-	font-weight: 300;
-}
-#projetos h3 {
-	width: 100%;
-	color: #d1ff83;
-	font-weight: 300;
-}
-.box {
-	display: inline-block;
-	padding: 15px;
-	margin: 15px;
-	min-height: 250px;
-	max-height: 250px;
-	min-width: 250px;
-  	max-width: 250px;
-  	color: #333;
-  	border: 0.8px solid #d1ff83;
-  	border-radius: 3px;
-}
-.box hr {
-    width: 100%;
-    border: 0.1px solid #d1ff83;
-}
-
-.box h3 {
-	color: #FFF;
-	padding: 10px;
-	min-height: 10px;
+.btn {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 110%;
+	font-weight: 400%;
+	color: #CBDFD6;
 	text-transform: uppercase;
+	text-decoration: none;
+	border: solid 1px #CBDFD6;
+	padding: 10px 20px;
+	border-radius: 9px;
+	transition: all 0.3s;
+	margin: 3px;
 }
-
-.box h4 {
-	font-weight: 300;
-	color: #FFF;
-	padding: 20px;
+.btn:hover {
+	color: #d1ff83;
+	border: solid 2px #d1ff83;
 }
-.submit {
-	padding: 10px 22px;
-	color: #fff;
-	border: 1px solid white;
-	border-radius: 4px;
+#whoami {
+	height: 100%;
+	width: 100%;
+	margin: auto;
+	background: url(../imgs/whoami.jpg) center no-repeat;
+	background-size: cover;
+	display: table;
+	top: 0;
+}
+label {
+    color: #fff;
+    font-weight: 500;
+}
+/*--- Login ---*/
+.alinhamento {
+	position: absolute;
+	margin: 0px auto 0px auto;
+}
+.line {
+	background-color: rgba(52,60,65,.5);
+	width: 340px;
+	min-height: 250px;
+	margin: 20px auto 0px;
+	border-radius: 3px;
+}
+#login {
+  margin: auto;
+  width: 300px;
+  padding: 15px;
+  margin-top: 20px;
+  min-height: 120px;
+}
+#login input {
+  width: 90%;
+  padding: 8px 12px;
+  padding-left: 12px;
+  border-radius: 4px;
+  margin-top: 10px;
+  background-color: #394147;
+  color: #949ba2;
+	border: none;
+	font-size: 14px;
+	line-height: 1.42857143;
+}
+#login input:focus {
+  border:1px solid #d1ff83;
+}
+.btn-login {
 	cursor: pointer;
-	background: #6f6f6f;
-	text-decoration: none;	
+	background-color: rgba(154,204,20,.1);
+	border-color: #9acc14;
+	color: #fff;
+	margin: 0 auto;
+	margin-bottom: 100px;;
 }
-.submit:hover {
-	color: #d1ff83;;
+/*--- redimensionar --*/
+@media screen and (max-width: 900px) {
+	.content {
+		padding-bottom: 30%;
+	}
+	.content h1 {
+		font-size: 450%;
+	}
+	.btn {
+		font-size: 60%;
+		padding: 9px 15px;
+	}
 }
-.down {
-	position: relative;
-	top: 40px;
+@media screen and (max-width: 768px) {
+	.content {
+		padding-bottom: 30%;
+	}
+	.content h1 {
+		font-size: 300%;
+	}
+	.btn {
+		font-size: 50%;
+		padding: 7px 15px;
+	}
+}
+@media screen and (max-width: 480px) {
+	.content {
+		padding-bottom: 50%;
+	}
+	.content h1 {
+		font-size: 250%;
+	}
+	.btn {
+		font-size: 40%;
+		padding: 6px 14px;
+	}
 }
