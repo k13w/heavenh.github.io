@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Yantramanav:100');
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400');
+@import url('https://fonts.googleapis.com/css?family=Raleway:400');
+
 
 html, body {
 	margin: 0;
@@ -33,24 +34,33 @@ html, body {
 	font-size: 700%;
 	font-weight: 100;
 	color: #d1ff83;
-	line-height: 70%
+	line-height: 50%
 }
-.btn {
+.content h2 {
+	font-family: 'Yantramanav', sans-serif;
+	font-size: 350%;
+	font-weight: 100;
+	color: #d1ff83;
+	line-height: 150%
+}
+.btn-hvn {
 	font-family: 'Montserrat', sans-serif;
 	font-size: 110%;
 	font-weight: 400%;
 	color: #CBDFD6;
 	text-transform: uppercase;
-	text-decoration: none;
 	border: solid 1px #CBDFD6;
 	padding: 10px 20px;
 	border-radius: 9px;
 	transition: all 0.3s;
 	margin: 3px;
 }
-.btn:hover {
+.btn-hvn:hover {
 	color: #d1ff83;
 	border: solid 2px #d1ff83;
+}
+.animatet a {
+	text-decoration: none;
 }
 #whoami {
 	height: 100%;
@@ -61,52 +71,7 @@ html, body {
 	display: table;
 	top: 0;
 }
-label {
-    color: #fff;
-    font-weight: 500;
-}
 /*--- Login ---*/
-.alinhamento {
-	position: absolute;
-	margin: 0px auto 0px auto;
-}
-.line {
-	background-color: rgba(52,60,65,.5);
-	width: 340px;
-	min-height: 250px;
-	margin: 20px auto 0px;
-	border-radius: 3px;
-}
-#login {
-  margin: auto;
-  width: 300px;
-  padding: 15px;
-  margin-top: 20px;
-  min-height: 120px;
-}
-#login input {
-  width: 90%;
-  padding: 8px 12px;
-  padding-left: 12px;
-  border-radius: 4px;
-  margin-top: 10px;
-  background-color: #394147;
-  color: #949ba2;
-	border: none;
-	font-size: 14px;
-	line-height: 1.42857143;
-}
-#login input:focus {
-  border:1px solid #d1ff83;
-}
-.btn-login {
-	cursor: pointer;
-	background-color: rgba(154,204,20,.1);
-	border-color: #9acc14;
-	color: #fff;
-	margin: 0 auto;
-	margin-bottom: 100px;;
-}
 /*--- redimensionar --*/
 @media screen and (max-width: 900px) {
 	.content {
