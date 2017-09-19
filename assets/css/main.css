@@ -1,49 +1,52 @@
 @import url('https://fonts.googleapis.com/css?family=Yantramanav:100');
 @import url('https://fonts.googleapis.com/css?family=Raleway:400');
 
-
-html, body {
-	margin: 0;
-	padding: 0;
-	height: 100%;
-	width: 100%;
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  height: 100%;
+  width: 100%;
 }
-.home {
-	height: 100%;
-	width: 100%;
+.container {
+  background: #161828;
 	margin: auto;
-	background: url(../imgs/background.jpg) center no-repeat;
-	background-size: cover;
-	display: table;
-	top: 0;
-}
-.home .inner {
-	display: table-cell;
-	vertical-align: middle;
-	width: 100%;
-	max-width: none;
+  position: fixed;
 }
 .content {
-	max-width: 600px;
-	margin: 0 auto;
-	text-align: center;
-	padding-bottom: 20%;
+  position: absolute;
+  margin: auto;
+  background-size: cover;
+  display: table;
+  top: 0;
+  text-align: center;
 }
 .content h1 {
-	font-family: 'Yantramanav', sans-serif;
-	font-size: 700%;
-	font-weight: 100;
-	color: #d1ff83;
-	line-height: 50%
+  font-family: 'Yantramanav', sans-serif;
+  font-size: 700%;
+  font-weight: 100;
+  line-height: 50%;
+  position: absolute;
+  color: #E1EFE9;
+  top: 300px;
 }
 .content h2 {
-	font-family: 'Yantramanav', sans-serif;
-	font-size: 350%;
-	font-weight: 100;
-	color: #d1ff83;
-	line-height: 150%
+  position: absolute;
+  top: 370px;
+  font-family: 'Yantramanav', sans-serif;
+  font-size: 350%;
+  font-weight: 100;
+  color: #E1EFE9;
+  line-height: 150%;
 }
-.btn-hvn {
+.content a {
+  text-decoration: none;
+}
+.links {
+  position: absolute;
+  top: 470px;
+}
+.btn {
 	font-family: 'Montserrat', sans-serif;
 	font-size: 110%;
 	font-weight: 400%;
@@ -55,23 +58,11 @@ html, body {
 	transition: all 0.3s;
 	margin: 3px;
 }
-.btn-hvn:hover {
-	color: #d1ff83;
-	border: solid 2px #d1ff83;
+.btn:hover {
+	color: #CBDFD6;
+	border: solid 2px #353a5c;
 }
-.animatet a {
-	text-decoration: none;
-}
-#whoami {
-	height: 100%;
-	width: 100%;
-	margin: auto;
-	background: url(../imgs/whoami.jpg) center no-repeat;
-	background-size: cover;
-	display: table;
-	top: 0;
-}
-/*--- Login ---*/
+
 /*--- redimensionar --*/
 @media screen and (max-width: 900px) {
 	.content {
@@ -80,6 +71,9 @@ html, body {
 	.content h1 {
 		font-size: 450%;
 	}
+  .content h2 {
+    font-size: 450%;
+  }
 	.btn {
 		font-size: 60%;
 		padding: 9px 15px;
@@ -92,6 +86,9 @@ html, body {
 	.content h1 {
 		font-size: 300%;
 	}
+  .content h2 {
+    font-size: 300%;
+  }
 	.btn {
 		font-size: 50%;
 		padding: 7px 15px;
@@ -104,6 +101,9 @@ html, body {
 	.content h1 {
 		font-size: 250%;
 	}
+  .content h2 {
+    font-size: 200%;
+  }
 	.btn {
 		font-size: 40%;
 		padding: 6px 14px;
