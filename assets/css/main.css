@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Yantramanav:100');
 @import url('https://fonts.googleapis.com/css?family=Raleway:400');
+@import url('https://fonts.googleapis.com/css?family=Jura:400');
 
 * {
   padding: 0;
@@ -11,7 +12,7 @@
 .container {
   background: #161828;
 	margin: auto;
-  position: fixed;
+
 }
 .content {
   position: absolute;
@@ -22,7 +23,7 @@
   text-align: center;
 }
 .content h1 {
-  font-family: 'Yantramanav', sans-serif;
+  font-family: 'Jura', sans-serif;
   font-size: 700%;
   font-weight: 100;
   line-height: 50%;
@@ -63,6 +64,104 @@
 	border: solid 2px #353a5c;
 }
 
+
+
+#whoami {
+  height: 100%;
+	width: 100%;
+  background-color: #161828;
+	margin: auto;
+	display: table;
+	top: 0;
+}
+
+.mid h2 {
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 300;
+  color: #E1EFE9;
+}
+.mid h2:after {
+  background-image: url("../images/hr.png");
+  background-position: 0 0;
+  content: "";
+  display: block;
+  height: 5px;
+  margin: 10px auto;
+  width: 62px;
+  color: #E1EFE9;
+}
+.mid h3 {
+  padding-top: 4%;
+  padding-left: 4%;
+  text-align: center;
+  font-weight: 300;
+  width: 91%;
+  color: #E1EFE9;
+}
+.service-item {
+  display: inline-block;
+  vertical-align: top;
+  width: calc(100% / 3);
+  padding: 0 15px;
+  box-sizing: border-box;
+  margin-top: 65px;
+}
+.service-icon {
+  font-size: 38px;
+  margin-bottom: 15px;
+  color: #91DC5A;
+}
+.service-title {
+  font-size: 18px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  color: #E1EFE9;
+  text-align: center;
+}
+.service-description {
+  font-size: 15px;
+  color: white;
+  padding: 20px;
+}
+.icon-angular {
+  background-image: url(../imgs/react.png);
+  background-size: 1000px 5000px;
+  background-repeat: no-repeat;
+  padding-left: 45px;
+}
+.info-team img {
+  -webkit-filter:grayscale(100%);
+  margin-left: 30%;
+}
+.info-team:hover img{
+    -webkit-filter:grayscale(0%);
+    transition: 1s;
+}
+.info-team {
+  display: inline-block;
+}
+.info-team img {
+	border: 2px #d1ff83 solid;
+	border-radius: 50%;
+	margin-top: 5%;
+	height: 150px;
+	width: 150px;
+}
+.mid:hover .overlay {
+  opacity: 1;
+}
+@media screen and (max-width: 768px) {
+  .service-item {
+    width: calc(100% / 2);
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .service-item {
+    width: 100%;
+  }
+}
 /*--- redimensionar --*/
 @media screen and (max-width: 900px) {
 	.content {
@@ -72,7 +171,7 @@
 		font-size: 450%;
 	}
   .content h2 {
-    font-size: 450%;
+    font-size: 300%;
   }
 	.btn {
 		font-size: 60%;
@@ -87,7 +186,7 @@
 		font-size: 300%;
 	}
   .content h2 {
-    font-size: 300%;
+    font-size: 200%;
   }
 	.btn {
 		font-size: 50%;
@@ -99,13 +198,13 @@
 		padding-bottom: 50%;
 	}
 	.content h1 {
-		font-size: 250%;
+		font-size: 200%;
 	}
   .content h2 {
-    font-size: 200%;
+    font-size: 150%;
   }
 	.btn {
-		font-size: 40%;
+		font-size: 30%;
 		padding: 6px 14px;
 	}
 }
