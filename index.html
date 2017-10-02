@@ -3,35 +3,67 @@
   <head>
     <meta charset="utf-8">
     <title>FireShell Security Team</title>
-    <meta name="description" content="Melhor time de CTF do mundo!.">
+    <meta name="description" content="Best Ctf-team of world!.">
     <meta name="author" content="Gilmar Silva">
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
   </head>
 
   <body>
-      <div class="container">
+    <header class="container">
         <!--Div para chamar o particles.js-->
         <div id="particles-js">
           <div class="content">
-            <section class="animated fadeInDown">
-              <h1>FireShell</h1>
-              <h2 class="animated bounceInUp">Security Team</h2>
+            <section>
+              <h1 class="animated fadeIn">FireShell</h1>
+              <h2 class="animated bounceInUp">Security Researcher</h2>
             </section>
 
 				    <section class="animated bounceInUp">
               <div class="links">
       					<a class="btn" href="#whoami">Line UP</a>
-      					<a class="btn" href="#whoami">Github</a>
-      					<a class="btn" href="#whoami">Blog</a>
-      					<a class="btn" href="#whoami">Write-Ups</a>
+      					<a class="btn" href="#">Github</a>
+      					<a class="btn" href="#">Blog</a>
+      					<a class="btn" href="#">Write-Ups</a>
               </div>
 				     </section>
           </div>
         </div>
-      </div>
+    </header>
+
+    <section id="whoami">
+      <div class="mid">
+        <h2>Frameworks Javascript</h2>
+        <h3> Front-end JavaScript frameworks
+           Line Up
+        </h3>
+        <ul class="framework-list">
+          <li class="service-item">
+            <p class="service-title">Adriano Ribeiro</p>
+              <div class="info-team">
+                <a href="#adrianoribeiro"></a>
+                <img src="https://avatars1.githubusercontent.com/u/30243342" alt="image">
+                 <p class="service-description">
+                  Analista de sistema, CTF-Player CEO fireShell Security-Team
+                 </p>
+               </div>
+             <li class="service-item">
+               <p class="service-title">Gilmar Silva</p>
+               <div class="info-team">
+                 <a href="#gilmarheaven"></a>
+                  <img src="https://avatars2.githubusercontent.com/u/13907472" alt="image">
+                    <p class="service-description">
+                      Analista de sistema, CTF-Player
+                    </p>
+                  </div>
+           </li>
+         </ul>
+     </div>
+   </section>
         <!-- scripts -->
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="assets/js/overlay.js"></script>
     <script>
     /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
     particlesJS.load('particles-js', 'assets/js/particles.json', function() {
