@@ -7,7 +7,7 @@ jQuery(document).ready(function($) {
 
 $(document).ready(function() {
   $('html').niceScroll({
-    cursorborder: '#d1ff83',
-    cursorcolor:  '#d1ff83'
+    cursorborder: '#E1EFE9',
+    cursorcolor:  '#E1EFE9'
   });
 });
