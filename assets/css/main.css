@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Yantramanav:100');
 @import url('https://fonts.googleapis.com/css?family=Raleway:400');
 @import url('https://fonts.googleapis.com/css?family=Jura:400');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
 * {
   padding: 0;
@@ -10,7 +11,7 @@
   width: 100%;
 }
 .container {
-  background: #202126;
+  background: #161828;
 	margin: auto;
 
 }
@@ -74,13 +75,12 @@
 	display: table;
 	top: 0;
 }
-
 .mid h2 {
   margin-top: 100px;
   text-transform: uppercase;
   text-align: center;
   font-weight: 300;
-  color: #E1EFE9;
+  color: #d1ff83;
 }
 .mid h2:after {
   background-image: url("../images/hr.png");
@@ -93,8 +93,8 @@
   color: #E1EFE9;
 }
 .mid h3 {
-  padding-top: 4%;
-  padding-left: 4%;
+  padding-top: 20%;
+  padding-left: 20%;
   text-align: center;
   font-weight: 300;
   width: 91%;
@@ -109,7 +109,7 @@
   margin-top: 65px;
 }
 .service-icon {
-  font-size: 38px;
+  font-size: 50px;
   margin-bottom: 15px;
   color: #91DC5A;
 }
@@ -119,12 +119,6 @@
   margin-bottom: 10px;
   color: #E1EFE9;
   text-align: center;
-}
-.service-description {
-  font-size: 15px;
-  color: white;
-  padding: 20px;
-  display: none;
 }
 .icon-angular {
   background-image: url(../imgs/react.png);
@@ -152,6 +146,78 @@
 }
 .mid:hover .overlay {
   opacity: 1;
+}
+#team {
+  background-color: #161825;
+}
+#team h1 {
+  color: #d1ff83;
+  position: absolute;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 100px;
+}
+#team h3 {
+  position: absolute;
+  margin-top: 200px;
+  color: #E1EFE9;
+  font-family: 'Yantramanav', sans-serif;
+  text-align: center;
+}
+#overlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 2;
+    cursor: pointer;
+}
+#overlay h2 {
+  position: absolute;
+  margin-top: 150px;
+  top: 50%;
+  left: 50%;
+  font-size: 50px;
+  color: #d1ff83;
+  transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+}
+#overlay .description {
+  margin-top: 50px;
+  transform: translate(-10%,-10%);
+  -ms-transform: translate(-10%,-30%);
+  position: absolute;
+  top: 30%;
+  left: 30%;
+  font-size: 25px;
+  color: white;
+  padding: 30px;
+}
+footer {
+	height: 140px;
+	background-color: #30353c;
+	padding-top: 1%;
+}
+
+footer h4 {
+	color: #E1EFE9;
+	font-weight: 300;
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+}
+p {
+  display: none;
+}
+.social-icons img {
+	padding: 5px;
+	padding-top: 3%;
+	width: 25px;
+	height: 25px;
 }
 @media screen and (max-width: 768px) {
   .service-item {
