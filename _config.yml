@@ -3,10 +3,6 @@ title: Gilmar Silva
 description: 'Security Reseacher'
 url: ''
 baseurl: ''
-host: 0.0.0.0
-port: 8080
-# google_analytics: 'UA-XXXXXX-X'
-# disqus_shortname: 'your-disqus-name'
 
 author:
   name: 'Gilmar Silva'
