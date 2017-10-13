@@ -1,8 +1,3 @@
----
-title: Serial - CSAW 2017 Quals
-layout: post
----
-
 Challenge:
 
 Temos um servidor dando para a porta 4239, conectando via nc o servidor retornou o seguinte:
@@ -62,5 +57,7 @@ while solve:
 
 print  flag
 ```
+
+![solution]({{ "../assets/flag.jpg" | absolute_url }})
 
 `The flag is : flag{@n_int3rface_betw33n_data_term1nal_3quipment_and_d@t@_circuit-term1nating_3quipment}`
