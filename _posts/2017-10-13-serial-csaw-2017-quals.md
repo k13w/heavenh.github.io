@@ -33,32 +33,31 @@ e convertemos cada byte no caracter ascci para obter a bandeira
 
 `solve.py`
 ``` python
-from socket import socket, AF_INET, SOCK_STREAM
+from pwn import *
 from re import compile
 
-sock = socket(AF_INET, SOCK_STREAM)
-sock.connect(('misc.chal.csaw.io', 4239))
 
-response = compile(r'[01]{11}') # carrega os 11bits
-main = sock.recv(8192) #  "8-1-1 paridade par. Responda com '1' se você obteve o byte, '0' para retransmitir.
+r = remote("misc.chal.csaw.io", 4239)
+r.recvline()
 
-
+response = compile(r'[01]{11}')
+main = r.recvline(8192).rstrip()
 
 flag = ''
 solve = response.search(main)
 while solve:
     string = solve.group()
     serial = string[1:9]
-    parityBit = int(string[-2]) # nós convertemos em int, para comparação
-    if (serial.count("1") % 2) == parityBit: # se o serial estiver certo nos envia "1"
-        flag += chr(int(serial,2)) # Converter o byte em int e depois em ascii
+    parityBit = int(string[-2])
+    if (serial.count('1') % 2) == parityBit:
+        flag += chr(int(serial,2))
         print flag
-        sock.send("1\n")    
+        r.sendline('1\n')
 
-    else : # se o serial estiver errado, nos envia "0"
-        sock.send("0\n")
+    else :
+        r.sendline('0\n')
 
-    main = sock.recv(8192)
+    main = r.recvline(8192).strip()
     solve = response.search(main)
 
 print  flag
