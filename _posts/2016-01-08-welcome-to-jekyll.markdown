@@ -63,3 +63,16 @@ g.write(buf)
 g.close
 f.close
 ```
+
+``` python
+#!/usr/bin/python
+
+f = file("lock.iso")
+
+data = f.read()
+
+drop = drop = data[data.index('\x55\x64\x24\x02')+4:data.index('\x83\x1a\x34\xcd')]
+file("backup-recreate.zip","w").write(x)
+
+#output - DCTF{474dac08d29d013515a312d1a8460050634f9b3cb6a696a4c73652d1802a1872}
+```
