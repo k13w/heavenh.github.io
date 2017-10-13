@@ -58,3 +58,6 @@ print  flag
 ![solution]({{ "../images/flag.png" | absolute_url }})
 
 `flag{@n_int3rface_betw33n_data_term1nal_3quipment_and_d@t@_circuit-term1nating_3quipment}`
+
+Referência:
+https://noobsinthehood.gitbooks.io/nith/content/misc-50-serial.html
