@@ -1,7 +1,13 @@
+---
+title:  "Serial - CSAW 2017 Quals"
+date:   2017-10-13 12::11:23
+categories: [write-ups]
+tags: [CSAW 2017 Quals]
+---
 Challenge:
 
 Temos um servidor dando para a porta 4239, conectando via nc o servidor retornou o seguinte:
-``` python
+``` ruby
 nc misc.chal.csaw.io 4239
 ```
 
@@ -9,7 +15,7 @@ nc misc.chal.csaw.io 4239
 8-1-1 even parity. Respond with '1' if you got the byte, '0' to retransmit. 00110011101
 ```
 
-Analisar:
+Analyse:
 
 Depois de alguma pesquisa no google com "paridade par 8-1-1", descobri  que quando enviamos dados, podemos ter algumas vezes um erro na transmissão, então cada vez que enviamos um byte, contamos o número de "1" nesse byte e, se o número é mesmo, adicionamos "0" no nosso byte, se o número de "1" é estranho, adicionamos "1" ao nosso byte.
 Exemplo:
@@ -58,6 +64,6 @@ while solve:
 print  flag
 ```
 
-![solution]({{ "../assets/flag.jpg" | absolute_url }})
+![solution]({{ "../images/flag.png" | absolute_url }})
 
 `The flag is : flag{@n_int3rface_betw33n_data_term1nal_3quipment_and_d@t@_circuit-term1nating_3quipment}`
