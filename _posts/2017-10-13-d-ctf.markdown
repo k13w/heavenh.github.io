@@ -4,7 +4,7 @@ date:   2017-10-13 00:35:23
 categories: [write-ups]
 tags: [D-CTF Quals 2017]
 ---
-Ao extrair vem um arquivo `lock.iso` e um `ransomware.py`.
+Ao extrair o arquivo zipado vem dois arquivos, um `lock.iso` e um `ransomware.py` .
 
 `ransomware.py`
 ``` python
@@ -72,4 +72,4 @@ data = f.read()
 drop = drop = data[data.index('\x55\x64\x24\x02')+4:data.index('\x83\x1a\x34\xcd')]
 file("backup-recreate.zip","w").write(x)
 ```
-`DCTF{474dac08d29d013515a312d1a8460050634f9b3cb6a696a4c73652d1802a1872}`
+FLAG: `DCTF{474dac08d29d013515a312d1a8460050634f9b3cb6a696a4c73652d1802a1872}`
