@@ -1,45 +1,28 @@
-# jekyll-uno
+# The Monday Jekyll theme
+=========================
 
-Jekyll-Uno - a minimal, responsive theme for Jekyll based on the [Uno](https://github.com/daleanthony/Uno) theme for Ghost.
+Dark Theme:
+![](assets/img/documentation/dark.png)
 
-> :warning:
-  This theme requires ruby and rubygems installed
+Light Theme:
+![](assets/img/documentation/light.png)
 
-### Features
+# Demo
+View this jekyll theme in action [here](http://artemsheludko.pw/monday/)
 
-* Clean layout
-* Resposive layout
-* Pagination
-* Syntax highlighting
-* Social links
-* Tags listing page
-* Categories listing page
-* Google Analytics integration
-* Disqus integration
+Integrations
+  - [Google Fonts](https://fonts.google.com/)
+  - [Google Analytics](https://analytics.google.com/analytics/web/)
+  - [Disqus](https://disqus.com/)
+  - [Font Awesome](http://fontawesome.io/)
+  - Social media links
 
----
+# How to Use
 
-### Install and Test
+  For those unfamiliar with how Jekyll works, check out [jekyllrb.com](https://jekyllrb.com/) for all the details,
+  or read up on just the basics of [front matter](https://jekyllrb.com/docs/frontmatter/), [writing posts](https://jekyllrb.com/docs/posts/),
+  and [creating pages](https://jekyllrb.com/docs/pages/).
 
-1. Download or clone repo `git clone git@github.com:joshgerdes/jekyll-uno.git`
-2. Enter the folder: `cd jekyll-uno/`
-3. If you don't have bundler installed: `gem install bundler`
-3. Install Ruby gems: `bundle install`
-4. Start Jekyll server: `bundle exec jekyll serve --watch`
+## License
 
-Access via: [http://localhost:4000/jekyll-uno/](http://localhost:4000/jekyll-uno/)
-
----
-
-### Demo and Download
-
-[Demo](http://joshgerdes.com/jekyll-uno/)
-[Download](https://github.com/joshgerdes/jekyll-uno/archive/master.zip)
-
-![jekyll-uno - free Jekyll theme](/screenshot.png)
-
----
-
-### Copyright and license
-
-It is under [the MIT license](/LICENSE).
+GPL-v3.0
