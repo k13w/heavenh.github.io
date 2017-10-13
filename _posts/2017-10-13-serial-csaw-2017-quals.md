@@ -41,11 +41,11 @@ r = remote("misc.chal.csaw.io", 4239)
 r.recvline()
 
 response = compile(r'[01]{11}')
-main = r.recvline(8192).rstrip()
+query = r.recvline(8192).rstrip()
 
 flag = ''
-solve = response.search(main)
-while solve:
+solve = response.search(query)
+while True:
     string = solve.group()
     serial = string[1:9]
     parityBit = int(string[-2])
@@ -57,8 +57,8 @@ while solve:
     else :
         r.sendline('0\n')
 
-    main = r.recvline(8192).strip()
-    solve = response.search(main)
+    query = r.recvline(8192).strip()
+    solve = response.search(query)
 
 print  flag
 ```
