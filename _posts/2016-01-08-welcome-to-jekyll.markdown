@@ -6,10 +6,6 @@ tags: [D-CTF Quals 2017]
 ---
 Ao baixar o chall ele vem um arquivo rar, que ao extriar vem um arquivo .iso e um .py.
 
-To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
-
-Jekyll also offers powerful support for code snippets:
-
 ``` python
 buf = ""
 f = open("backup.zip", "r")
