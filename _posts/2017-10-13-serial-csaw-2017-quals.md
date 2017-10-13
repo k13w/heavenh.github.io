@@ -41,25 +41,24 @@ r = remote("misc.chal.csaw.io", 4239)
 r.recvline()
 
 response = compile(r'[01]{11}')
-query = r.recvline(8192).rstrip()
+query = r.recvline(512).rstrip()
 
 flag = ''
 solve = response.search(query)
 while True:
     string = solve.group()
     serial = string[1:9]
-    parityBit = int(string[-2])
-    if (serial.count('1') % 2) == parityBit:
+    parity = int(string[-2])
+    if (serial.count('1') % 2) == parity:
         flag += chr(int(serial,2))
         print flag
         r.sendline('1\n')
-
     else :
         r.sendline('0\n')
 
-    query = r.recvline(8192).strip()
+    query = r.recvline(512).strip()
     solve = response.search(query)
-
+    
 print  flag
 ```
 
