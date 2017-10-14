@@ -124,8 +124,10 @@ agora vamos ajeitar o caminho do `success_king`
 
 Dando um objdump -t <nome do arquivo> teremos o andress das minhas duas funções `success_king` e `success_knight`
 
-`000000000040084e g     F .text  000000000000002e              success_king`
-`000000000040082a g     F .text  0000000000000024              success_knight`
+``` c
+000000000040084e success_king
+000000000040082a success_knight
+```
 
 Agora para calcular o deslocamento basta diminuir o andress de uma função pela outra
 
