@@ -17,7 +17,7 @@ struct user {
 ```
 
 linha 17 a  31 não importa para nós, vamos pular e ir pra função `check_knight`
-``` c
+``` ruby
 void check_knight(struct user *user) {
     user->next = success_knight;
     printf("Keeper: What is your favorite color?\n");
