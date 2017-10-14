@@ -8,7 +8,7 @@ Challenge:
 
 Analisando a estrutura `user` nós se depara com uma variável color [8 bytes], uma variável name [8 bytes] e um ponteiro [8 bytes]
 
-``` python
+``` C
 struct user {
     char color[8];
     char name[8];
@@ -17,7 +17,7 @@ struct user {
 ```
 
 linha 17 a  31 não importa para nós, vamos pular e ir pra função `check_knight`
-```python
+``` C
 void check_knight(struct user *user) {
     user->next = success_knight;
     printf("Keeper: What is your favorite color?\n");
