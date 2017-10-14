@@ -28,7 +28,7 @@ void success_king(struct user *user) {
     user->next = NULL;
 }
 ```
-temos duas funções, uma sucess_knight e uma success_king, essa foi fácil, a função success king é a função final ontem entrega a
+temos duas funções, uma `success_knight` e uma `success_king`, essa foi fácil, a função success king é a função final ontem entrega a
 flag, e a função success_knight é apenas um caminho que não vai da em nada, então descartamos ela!
 
 vamos para proxima função `check_knight`.
