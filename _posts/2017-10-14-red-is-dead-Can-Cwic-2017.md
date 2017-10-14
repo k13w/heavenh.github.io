@@ -15,7 +15,7 @@ struct user {
 };
 ```
 
-linha 17 a  20 não importa para nós, vamos pular e ir para as funções `success_knight` e `sucess_king`.
+linha 17 a  20 não importa para nós, vamos pular e ir para as funções `success_knight` e `success_king`.
 ``` c
 void success_knight(struct user *user) {
     printf("Keeper: Right. Off you go.\n");
