@@ -4,8 +4,6 @@ date:   2017-10-14 10:47:06
 categories: [write-ups]
 tags: [Can CWIC CTF 2017]
 ---
-Challenge:
-
 Analisando a estrutura `user` nós se depara com uma variável color [8 bytes], uma variável name [8 bytes] e um ponteiro [8 bytes]
 sendo uma estrutura de 24 bytes em sistemas 64 bits
 
