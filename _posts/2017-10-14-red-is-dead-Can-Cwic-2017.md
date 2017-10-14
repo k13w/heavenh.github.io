@@ -53,6 +53,73 @@ Observando a linha 36 me deparei com um overflow
 ``` c
 char *res = fgets(user->color, sizeof(struct user), stdin);
 ```
-é até meio incomum ver isso mas enfim, ele tá usando o sizeof para pegar a quantidade de bytes da estrutura user e definir
+Aqui ele tá usando o sizeof para pegar a quantidade de bytes da estrutura user e definir
 na variável color, ou seja, o que era 8 bytes agr virou 24 bytes!, o que isso nos ajudará?
-poderemos fazer um buffer overflow que nos dará a proxima função
+poderemos fazer um buffer overflow que nos retornará alguns vazamentos de endereços
+
+``` c
+void check_king(struct user *user) {
+    user->next = success_king;
+    printf("Keeper: What is the air-speed velocity of an unladen swallow?\n");
+    printf("%s: What do you mean?\n", user->name);
+    char *res = fgets(user->color, sizeof(struct user), stdin);
+    if (res == NULL) {
+        user->next = NULL;
+        return;
+    }
+    chomp(user->color);
+    user->next = success_king;
+    if (strcmp(user->color,"An African or European swallow?")) {
+        user->next = dead;
+    }
+}
+```
+
+``` c
+void start(struct user *user) {
+    printf("Keeper: Stop! What is your name?\n");
+    char *res = fgets(user->name, sizeof(struct user), stdin);
+    if (res == NULL) {
+        user->next = NULL;
+        return;
+    }
+    chomp(user->name);
+
+    size_t len = strlen(user->name);
+    if (len < 2) { printf("Keeper: Sorry `%s', your name is too short\n", user->name);
+        user->next = NULL;
+        return;
+    }
+
+    if(!strncmp(user->name, "Arthur", 6)) {
+        user->next = check_king;
+        printf("Arthur: It is Arthur, King of the Britons.\n");
+    } else {
+        user->next = check_knight;
+        printf("%s: Sir %s of Camelot.\n", user->name, user->name);
+    }
+}
+```
+
+Bem, Nós poderia começar com o nome `Arthur` e nós iria para ``check_king`` nós realizaríamos a substituição do usuário-> seguinte, mas então não havia como para superar o seguinte check!
+
+então nós iria para `user->next = success_king;` que nos daria a flag, foi o que eu pensei, porém, not so easy!
+
+``` c
+chomp(user->color);
+    user->next = success_king;
+    if (strcmp(user->color,"An African or European swallow?")) {
+        user->next = dead;
+```
+
+Para nós ir para o success king isso era impossível, pois o comprimento da string era [31 bytes] era maior do que o número de bytes para a cor (24), portanto, o strcmp sempre retornaria verdadeiro (as strings não coincidem) e o usuário-> próximo seria configurado para morto.
+
+Portanto o check correto é o `check_knight`
+``` c
+if (strcmp(user->color,"red")) {
+    user->next = dead;
+}
+```
+
+Temos que burlar a cor para red, isso é fácil já que o fgets ler bytes nulos nós fazeria com`‘red\0’`, cor burlada
+agora vamos ajeitar o caminho do `success_king`
