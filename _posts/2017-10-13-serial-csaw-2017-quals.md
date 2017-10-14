@@ -1,6 +1,6 @@
 ---
 title:  "Serial - CSAW 2017 Quals"
-date:   2017-10-13 12::11:23
+date:   2017-10-13 12:11:23
 categories: [write-ups]
 tags: [CSAW 2017 Quals]
 ---
