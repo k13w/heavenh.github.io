@@ -99,7 +99,7 @@ void start(struct user *user) {
 }
 ```
 
-Bem, Nós poderia começar com o nome `Arthur` e nós iria para ``check_king`` nós realizaríamos a substituição do usuário-> seguinte, mas então não havia como para superar o seguinte check!
+Bem, Nós poderia começar com o nome `Arthur` e nós iria para `check_king` nós realizaríamos a substituição do usuário seguinte, mas não havia como ir para o seguinte check!
 
 então nós iria para `user->next = success_king;` que nos daria a flag, foi o que eu pensei, porém, not so easy!
 
@@ -110,7 +110,7 @@ chomp(user->color);
         user->next = dead;
 ```
 
-Para nós ir para o success king isso era impossível, pois o comprimento da string era [31 bytes] era maior do que o número de bytes para a cor (24), portanto, o strcmp sempre retornaria verdadeiro (as strings não coincidem) e o usuário-> próximo seria configurado para morto.
+Para nós ir para o `success king` isso era impossível, pois o comprimento da string era (31) era maior do que o número de bytes para a cor (24), portanto, o strcmp sempre retornaria verdadeiro, e o próximo usuário iria para dead.
 
 Portanto o check correto é o `check_knight`
 ``` c
