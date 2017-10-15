@@ -16,7 +16,7 @@ struct user {
 };
 ```
 
-linha 17 a  20 não importa para nós, vamos pular e ir para as funções `success_knight` e `success_king`.
+linha 17 a  20 não importa, vamos pular e ir para as funções `success_knight` e `success_king`.
 ``` c
 void success_knight(struct user *user) {
     printf("Keeper: Right. Off you go.\n");
@@ -29,8 +29,8 @@ void success_king(struct user *user) {
     user->next = NULL;
 }
 ```
-temos duas funções, uma `success_knight` e uma `success_king`, essa foi fácil, a função success king é a função final ontde entrega a
-flag, e a função success_knight é apenas um caminho que não vai da em nada, então descartamos ela!
+temos duas funções, uma `success_knight` e uma `success_king`, essa foi fácil, a função `success_king` é a função que entrega a
+flag, e a função `success_knight` é apenas um caminho que não vai da em nada, então descartamos ela!
 
 vamos para proxima função `check_knight`.
 ``` c
@@ -100,7 +100,7 @@ void start(struct user *user) {
 }
 ```
 
-Bem, Nós poderia começar com o nome `Arthur` e nós iria para `check_king` nós realizaríamos a substituição do usuário seguinte, mas não havia como ir para o seguinte check!
+Bem, Nós poderia começar com o nome `Arthur` e nós iria para `check_king`fazendo a substituição do próximo usuário, mas não havia como ir para o check seguinte!
 
 então nós iria para `user->next = success_king;` que nos daria a flag, foi o que eu pensei, porém, not so easy!
 
@@ -111,7 +111,7 @@ chomp(user->color);
         user->next = dead;
 ```
 
-Para nós ir para o `success king` isso era impossível, pois o comprimento da string era (31) era maior do que o número de bytes para a cor (24), portanto, o strcmp sempre retornaria verdadeiro, e o próximo usuário iria para dead.
+Para ir para o `success king` isso era impossível, pois o comprimento da string era (31) maior do que o número de bytes para a cor (24), portanto, o strcmp sempre retornaria verdadeiro, e o próximo usuário iria para dead.
 
 Portanto o check correto é o `check_knight`
 ``` c
