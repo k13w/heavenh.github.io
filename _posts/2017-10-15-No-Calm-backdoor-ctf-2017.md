@@ -81,32 +81,19 @@ Agora vamos fazer o solve
 Podemos ver que verifica 3 bytes no momento, com 3 verificações de operação diferentes E isso se repete para todos os 3 bytes ao longo da flag
 
 ``` python
-from z3 import *
+#!/usr/bin/env python
 
-def solve(a1, a2, a3):
-    a = Int('a')
-    b = Int('b')
-    c = Int('c')
-    s = Solver()
-    s.add(b + a - c == a1)
-    s.add(a - b + c == a2)
-    s.add(b - a + c == a3)
-    assert s.check() == sat
-    m = s.model()
-    return chr(m[a].as_long()) + chr(m[b].as_long()) + chr(m[c].as_long())
-
-res = solve(81, 53, 87)
-res += solve(90, 156, 66)
-res += solve(98, 140, 92)
-res += solve(38, 170, 60)
-res += solve(29, 161, 69)
-res += solve(163, 27, 69)
-res += solve(147, 43, 59)
-res += solve(146, 86, 44)
-res += solve(67, 89, 75)
-res += solve(117, 125, 125)
-
-print res
+eax = [0x51, 0x35, 0x57, 0x5a, 0x9c, 0x42, 0x62, 0x8c, 0x5c, 0x26, 0xaa, 0x3c,
+       0x1d, 0xa1, 0x45, 0xa3, 0x1b, 0x45, 0x93, 0x2b, 0x3b, 0x92, 0x56, 0x2c,
+       0x43, 0x59, 0x4b, 0x75, 0x7d, 0x7d]
+ 
+flag = ''
+for i in range(0, len(eax), 3):
+    flag += chr((eax[i] + eax[i + 1]) / 2)
+    flag += chr((eax[i] + eax[i + 2]) / 2)
+    flag += chr((eax[i + 1] + eax[i + 2]) / 2)
+ 
+print flag
 ```
 
 ``` ruby
