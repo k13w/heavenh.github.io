@@ -67,7 +67,7 @@ $objdump -d challenge | grep cmp
 ```
 
 ``` python
-python
+$ python
 >>> 0x51
 81
 >>> 0x35
