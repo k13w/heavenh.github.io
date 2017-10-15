@@ -77,6 +77,7 @@ python
 
 com IDA, apenas ir na função e converter o binário em pseudo code:
 
+![ida]({{ "../images/ida.png" | absolute_url }})
 
 Agora vamos fazer o solve
 
