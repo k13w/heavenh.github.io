@@ -18,13 +18,9 @@ Usage ./challenge <each byte of flag separated by spaces>
 No início do programa, o número de argumentos é verificado em relação ao valor 31. Isso nos deixa com 30 argumentos que devemos fornecer 
 desde que o primeiro argumento é sempre o caminho do próprio binário. Usando a saída que obtivemos anteriormente, podemos inferir que a 
 flag tem um comprimento de 30 bytes. O programa continua analisando os argumentos iterando sobre eles em um loop e armazenando o primeiro 
-byte de cada um em uma matriz. Em seguida, segue uma sequência muito longa de blocos:
+byte de cada um em uma matriz.
 
 cada byte da flag será um argumento, olhando para o código, podemos ver que cada byte da flag está sendo salvo da variável v6 a 35
-
-
-ttem varias condições, faz o cmp, deduzi que cada cmp seria um byte da flag, e a teoria estava certa, com um simples solve em py
-teremos a flag
 
 mas antes, vamos pegar os cmp, para não ficar pegando um por um no radare2, vamos fazer de uma maneira mais simples e eficaz
 vou mostrar duas forma de fazer isso, uma com objdump depois convertendo o hex, e outra com ida(o jeito simples)!
