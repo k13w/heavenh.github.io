@@ -28,7 +28,7 @@ teremos a flag
 
 mas antes, vamos pegar os cmp, para não ficar pegando um por um no radare2, vamos fazer de uma maneira mais simples e eficaz
 vou mostrar duas forma de fazer isso, uma com objdump depois convertendo o hex, e outra com ida(o jeito simples)!
-``` ruby
+``` c
 $objdump -d challenge | grep cmp
   400879:       83 f8 51                cmp    $0x51,%eax
   40089b:       83 f8 35                cmp    $0x35,%eax
