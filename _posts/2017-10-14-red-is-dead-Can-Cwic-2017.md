@@ -3,8 +3,10 @@ title:  "Red is Dead - Can CWIC CTF 2017"
 date:   2017-10-14 10:47:06
 categories: [write-ups]
 tags: [Can CWIC CTF 2017]
+
+[Download da challenge](https://www.sendspace.com/file/m9mm2s){:target="_blank"}
 ---
-Analisando a estrutura `user` nós se depara com uma variável color [8 bytes], uma variável name [8 bytes] e um ponteiro [8 bytes]
+Analisando a estrutura `user` nós se depara com uma variável color (8 bytes), uma variável name (8 bytes) e um ponteiro (8 bytes)
 sendo uma estrutura de 24 bytes em sistemas 64 bits
 
 ``` c
@@ -189,5 +191,4 @@ FLAG{Y0uCr0ss3dTh3Br1g30fD3ath}
 
 `FLAG{Y0uCr0ss3dTh3Br1g30fD3ath}`
 
-Download da challenge: https://www.sendspace.com/file/m9mm2s
 Agradecimentos ao Mateus Pimentel
