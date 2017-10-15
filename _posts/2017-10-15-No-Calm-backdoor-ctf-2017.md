@@ -9,8 +9,8 @@ Analisando o ELF
 
 ![anabin]({{ "../images/anabin.png" | absolute_url }})
 
-Rodando o binário
-``` c
+Rodando o file.
+``` ruby
 $ ./challenge
 Usage ./challenge <each byte of flag separated by spaces>
 ```
@@ -76,7 +76,7 @@ python
 87
 ```
 
-com IDA, apenas ir na função e converter o binário em pseudo code:
+com IDA, apenas ir na função e converter o binário em pseudo code C.
 
 ![ida]({{ "../images/ida.png" | absolute_url }})
 
@@ -113,7 +113,7 @@ res += solve(117, 125, 125)
 print res
 ```
 
-``` python
+``` ruby
 $ python solve.py
 $ CTF{Now_th1s_1s_t0_g3t_ANGRyy}
 ```
