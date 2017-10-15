@@ -5,7 +5,7 @@ categories: [write-ups]
 tags: [Can CWIC CTF 2017]
 ---
 
-Analisando a estrutura `user` nós se depara com uma variável color (8 bytes), uma variável name (8 bytes) e um ponteiro (8 bytes)
+Analisando a estrutura `user` nós nos deparamos com uma variável color (8 bytes), uma variável name (8 bytes) e um ponteiro (8 bytes)
 sendo uma estrutura de 24 bytes em sistemas 64 bits
 
 ``` c
@@ -29,8 +29,8 @@ void success_king(struct user *user) {
     user->next = NULL;
 }
 ```
-temos duas funções, uma `success_knight` e uma `success_king`, essa foi fácil, a função `success_king` é a função que entrega a
-flag, e a função `success_knight` é apenas um caminho que não vai da em nada, então descartamos ela!
+temos duas funções, uma `success_knight` e uma `success_king`, essa foi fácil, a função `success_king` é a que entrega a
+flag, e a `success_knight` é apenas um caminho que não vai dá em nada, então descartamos ela!
 
 vamos para proxima função `check_knight`.
 ``` c
@@ -53,8 +53,8 @@ Observando a linha 36 me deparei com um overflow
 char *res = fgets(user->color, sizeof(struct user), stdin);
 ```
 Aqui ele tá usando o sizeof para pegar a quantidade de bytes da estrutura user e definir
-na variável color, ou seja, o que era 8 bytes agr virou 24 bytes!, o que isso nos ajudará?
-poderemos fazer um buffer overflow que nos retornará alguns vazamentos de endereços
+na variável color, ou seja, o que era 8 bytes agora virou 24 bytes!, o que isso nos ajudará?
+poderemos fazer um buffer overflow que retornará alguns vazamentos de endereços!.
 
 ``` c
 void check_king(struct user *user) {
@@ -100,7 +100,7 @@ void start(struct user *user) {
 }
 ```
 
-Bem, Nós poderia começar com o nome `Arthur` e nós iria para `check_king`fazendo a substituição do próximo usuário, mas não havia como ir para o check seguinte!
+Bem, nós poderia começar com o nome `Arthur` e nós iria para `check_king`fazendo a substituição do próximo usuário, mas não havia como ir para o check seguinte!
 
 então nós iria para `user->next = success_king;` que nos daria a flag, foi o que eu pensei, porém, not so easy!
 
