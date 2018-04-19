@@ -21,7 +21,7 @@ app = Flask(__name__)
 ```
 
 Defino a váriavel app que recebe a class Flask(), essa class serve para definir o nome do seu app, 
-você pode colocar dentro dos `()` o nome entre parenteses ou usar o método `__name__`, esse método irá definir automaticamente o nome do app com base o nome do seu arquivo.
+você pode colocar dentro dos `()` o nome entre parênteses ou usar o método `__name__`, esse método irá definir automaticamente o nome do app com base o nome do seu arquivo.
 ``` python
 if __name__ == "__main__":
     app.run()
