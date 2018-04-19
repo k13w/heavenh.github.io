@@ -21,10 +21,7 @@ app = Flask(__name__)
 ```
 
 Defino a váriavel app que recebe a class Flask(), essa class ela serve para pegar o nome do seu app
-voce pode colocar dentro dos () o nome entre parenteses ou usar o método __name__, que 99% das pessoas usa
-o esse método. __name__ vai buscar automaticamente o nome pelo seu arquivo, se nosso arquivo se chama services.py
-o nome do app ficará services
-
+voce pode colocar dentro dos () o nome entre parenteses ou usar o método __name__, __name__ vai buscar automaticamente o nome pelo seu arquivo.
 ``` python
 if __name__ == "__main__":
     app.run()
@@ -36,7 +33,7 @@ dessa forma nós pegaremos só um bloco do código!
 
 Aqui nós já temos nosso servidor web rodando
 
-se você der um python app.py verá que ele está rodando no localhost na porta 5000
+se você der um ```python app.py``` verá que ele está rodando no localhost na porta 5000
 
 ``` python
 from flask import Flask
