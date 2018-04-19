@@ -1,5 +1,5 @@
 ---
-title:  "Flask Null to Full"
+title:  "Flask Null to Full - Criando seu servidor web"
 date:   2018-04-19 16:11:42
 categories: [frameworks]
 tags: [flask]
