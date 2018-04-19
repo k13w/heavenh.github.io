@@ -17,12 +17,17 @@ vamos lá
 @app.route('/data/')
 def data():
     return 'The data page'
+```
 
+Regras Variáveis:
+``` python
 @app.route('/user/<username>')
 def show_user_profile():
     return 'User %s' % username
 ```
-Os seguintes conversores que o route aceita:
+Opcionalmente, um conversor pode ser usado especificando uma regra com <converter: variable_name>
+Ex: `/user/<int: age>`
+Os seguintes conversores que as rules aceita:
 
 |   string |  aceita qualquer texto sem barra (o padrão) |
 |   int    |  aceita inteiros |
@@ -31,7 +36,9 @@ Os seguintes conversores que o route aceita:
 |   any    |  corresponde a um dos itens fornecidos |
 |   uuid   |  aceita strings UUID |
 
-Acabamos de definir duas rotas, quando o usuário acessar `localhost:5000/user` ele vai da 404, bem óbvio né
-ele pede pra passar um `<username>`
-então podemos acessar da seguinte maneira `localhost:5000/user/heaven`.
-e eu terei o retorno do meu username.
+Acabamos de definir duas rotas, quando o usuário acessar `localhost:5000/data` ele irá acessar a pagina data, bem óbvio né.
+já na `/user/<username>` você deverá passar um argumento, então podemos acessar da seguinte maneira `localhost:5000/user/<argument>`.
+e eu terei o retorno o username digitado via GET, no meu caso colocarei heaven no argumento.
+`User heaven`
+
+para passar um conversor a sintax é assim
