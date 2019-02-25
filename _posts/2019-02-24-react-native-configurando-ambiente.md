@@ -20,7 +20,9 @@ Configurando variaveis de ambiente:
 
 The SDK é instalado, por padrão no seguinte caminho
 
-`C:\Users\<username>\AppData\Local\Android\Sdk`
+``` javascript
+C:\Users\<username>\AppData\Local\Android\Sdk
+```
 
 2° - Crie uma variavel de ambiente com o nome "JAVA_HOME" e coloque o path do java-jdk
 
@@ -28,7 +30,9 @@ The SDK é instalado, por padrão no seguinte caminho
 
 3° - Adicione um novo caminho no PATH para o platform-tools
 
-`C:\Users\<username>\AppData\Local\Android\Sdk\platform-tools`
+``` javascript
+C:\Users\<username>\AppData\Local\Android\Sdk\platform-tools
+```
 
 Abra a pasta do seu projeto e va para -> Android
 Crie um arquivo com o nome `local.properties`
@@ -40,10 +44,13 @@ linux: sdk.dir = /home/<username>/Android/Sdk
 
 Feito isso vamos instalar o react-native-cli
 
-Abra o terminal e rode um `npm install -g react-native-cli`
+Abra o terminal e rode um
+``` javascript
+npm install -g react-native-cli
+```
 
 Agora vamos criar nosso projeto:
-``` javascript
+``` shell
 react-native init moon
 cd react-native init moon
 react-native run-android
