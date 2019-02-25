@@ -20,13 +20,13 @@ Configurando variaveis de ambiente:
 
 The SDK é instalado, por padrão no seguinte caminho
 
-``` javascript
+``` python
 C:\Users\<username>\AppData\Local\Android\Sdk
 ```
 
 2° - Crie uma variavel de ambiente com o nome "JAVA_HOME" e coloque o path do java-jdk
 
-`C:\Program Files\Java\jdk1.8.0_201`
+````python C:\Program Files\Java\jdk1.8.0_201```
 
 3° - Adicione um novo caminho no PATH para o platform-tools
 
@@ -35,7 +35,7 @@ C:\Users\<username>\AppData\Local\Android\Sdk\platform-tools
 ```
 
 Abra a pasta do seu projeto e va para -> Android
-Crie um arquivo com o nome `local.properties`
+Crie um arquivo com o nome ``` ruby local.properties```
 Abra o arquivo e coloque esse caminho de acordo com seu OS
 
 Windows: sdk.dir = C:\\Users\\<username>\\AppData\\Local\\Android\\sdk
@@ -50,7 +50,7 @@ npm install -g react-native-cli
 ```
 
 Agora vamos criar nosso projeto:
-``` shell
+``` ruby
 react-native init moon
 cd react-native init moon
 react-native run-android
