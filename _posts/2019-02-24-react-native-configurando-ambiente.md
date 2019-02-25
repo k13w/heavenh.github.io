@@ -9,7 +9,7 @@ debugando erro por erro, vamos lá consegui resumi um tópico eficiente
 
 Pacotes que iramos precisar para rodar o react-native:
 
-``` javascript
+``` ruby
 - Node js
 - Jdk8
 - Android studio(Android SDK, Android SDK Platform)
@@ -43,9 +43,18 @@ local.properties
 ```
 Abra o arquivo e coloque esse caminho de acordo com seu OS
 
-Windows: sdk.dir = C:\\Users\\<username>\\AppData\\Local\\Android\\sdk
-macOS: sdk.dir = /Users/<username>/Library/Android/sdk
-linux: sdk.dir = /home/<username>/Android/Sdk
+Windows:
+``` ruby
+sdk.dir = C:\\Users\\<username>\\AppData\\Local\\Android\\sdk
+```
+macOS: 
+``` ruby
+sdk.dir = /Users/<username>/Library/Android/sdk
+```
+linux:
+``` ruby
+sdk.dir = /home/<username>/Android/Sdk
+```
 
 Feito isso vamos instalar o react-native-cli
 
@@ -55,7 +64,7 @@ npm install -g react-native-cli
 ```
 
 Agora vamos criar nosso projeto:
-``` javascript
+``` ruby
 react-native init moon
 cd react-native init moon
 react-native run-android
