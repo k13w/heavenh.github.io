@@ -4,8 +4,7 @@ date:   2019-02-24 13:22:24
 categories: [learn]
 tags: [react-native]
 ---
-Depois de pesquisar por conteudo bom ensinando a configurar um ambiente react-native e nao achar, resolvi fazer eu mesmo e
-debugando erro por erro, vamos lá consegui resumi um tópico eficiente
+Nesse post você irá aprender a configurar um ambiente react-native, sem bugs, e dinãmico!
 
 Pacotes que iramos precisar para rodar o react-native:
 
@@ -66,7 +65,7 @@ npm install -g react-native-cli
 Agora vamos criar nosso projeto:
 ``` ruby
 react-native init moon
-cd react-native init moon
+cd moon
 react-native run-android
 ```
 
