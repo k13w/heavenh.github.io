@@ -26,7 +26,7 @@ C:\Users\<username>\AppData\Local\Android\Sdk
 
 2° - Crie uma variavel de ambiente com o nome "JAVA_HOME" e coloque o path do java-jdk
 
-````python C:\Program Files\Java\jdk1.8.0_201```
+```python C:\Program Files\Java\jdk1.8.0_201```
 
 3° - Adicione um novo caminho no PATH para o platform-tools
 
@@ -50,7 +50,7 @@ npm install -g react-native-cli
 ```
 
 Agora vamos criar nosso projeto:
-``` ruby
+``` perl
 react-native init moon
 cd react-native init moon
 react-native run-android
