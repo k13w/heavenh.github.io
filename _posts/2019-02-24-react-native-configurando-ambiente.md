@@ -18,7 +18,7 @@ Configurando variaveis de ambiente:
 
 1° - Crie uma nova variavel de ambiente com o nome "ANDROID_HOME" e coloque o path do android-sdk
 
-The SDK é instalado, por padrão no seguinte caminho
+O SDK é instalado, por padrão no seguinte caminho
 
 ``` ruby
 C:\Users\<username>\AppData\Local\Android\Sdk
@@ -26,13 +26,13 @@ C:\Users\<username>\AppData\Local\Android\Sdk
 
 2° - Crie uma variavel de ambiente com o nome "JAVA_HOME" e coloque o path do java-jdk
 
-``` python
+``` ruby
 C:\Program Files\Java\jdk1.8.0_201
 ```
 
 3° - Adicione um novo caminho no PATH para o platform-tools
 
-``` javascript
+``` ruby
 C:\Users\<username>\AppData\Local\Android\Sdk\platform-tools
 ```
 
@@ -50,7 +50,7 @@ linux: sdk.dir = /home/<username>/Android/Sdk
 Feito isso vamos instalar o react-native-cli
 
 Abra o terminal e rode um
-``` javascript
+``` ruby
 npm install -g react-native-cli
 ```
 
