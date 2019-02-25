@@ -9,7 +9,7 @@ debugando erro por erro, vamos lá consegui resumi um tópico eficiente
 
 Pacotes que iramos precisar para rodar o react-native:
 
-```
+``` javascript
 - Node js
 - Jdk8
 - Android studio(Android SDK, Android SDK Platform)
