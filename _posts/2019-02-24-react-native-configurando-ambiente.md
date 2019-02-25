@@ -20,7 +20,7 @@ Configurando variaveis de ambiente:
 
 The SDK é instalado, por padrão no seguinte caminho
 
-``` python
+``` ruby
 C:\Users\<username>\AppData\Local\Android\Sdk
 ```
 
@@ -55,7 +55,7 @@ npm install -g react-native-cli
 ```
 
 Agora vamos criar nosso projeto:
-``` perl
+``` javascript
 react-native init moon
 cd react-native init moon
 react-native run-android
