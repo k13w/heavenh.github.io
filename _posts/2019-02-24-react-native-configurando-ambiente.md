@@ -38,8 +38,8 @@ C:\Users\<username>\AppData\Local\Android\Sdk\platform-tools
 
 Abra a pasta do seu projeto e va para -> Android
 Crie um arquivo com o nome
-``` 
-ruby local.properties
+``` ruby
+local.properties
 ```
 Abra o arquivo e coloque esse caminho de acordo com seu OS
 
