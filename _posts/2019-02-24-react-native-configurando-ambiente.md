@@ -34,6 +34,12 @@ C:\Program Files\Java\jdk1.8.0_201
 ``` ruby
 C:\Users\<username>\AppData\Local\Android\Sdk\platform-tools
 ```
+4° - Aceita as licensas do sdkmanager
+
+``` ruby
+cd "%ANDROID_HOME%"/tools/bin
+sdkmanager --licenses
+```
 
 Abra a pasta do seu projeto e va para -> Android
 Crie um arquivo com o nome
