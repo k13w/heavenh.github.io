@@ -1,16 +1,13 @@
 # Site settings
-title: Gilmar Silva
-description: 'Python Engineer | Security Reseacher | Software Developer'
+title: Ilusme
+description: 'a simple ilusme today'
 url: ''
 baseurl: ''
 
 author:
   name: 'Gilmar Silva'
-  email: gilmar@fireshellsecurity.team
-  twitter_username: gilmazin_
-  facebook_username: gilmazin
-  github_username:  heavenh
-  linkedin_username:  heaven
+  email: gilmar.filho@contaazul.com
+
 
 defaults:
   -
